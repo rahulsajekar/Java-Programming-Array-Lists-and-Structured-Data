@@ -1,0 +1,18 @@
+#BlueJ class context
+comment0.target=VigenereBreaker
+comment1.params=
+comment1.target=VigenereBreaker()
+comment2.params=message\ whichSlice\ totalSlices
+comment2.target=java.lang.String\ sliceString(java.lang.String,\ int,\ int)
+comment3.params=encrypted\ klength\ mostCommon
+comment3.target=int[]\ tryKeyLength(java.lang.String,\ int,\ char)
+comment4.params=
+comment4.target=void\ breakVigenere()
+comment5.params=fr
+comment5.target=java.util.HashSet\ readDictionary(edu.duke.FileResource)
+comment6.params=message\ dictionary
+comment6.target=int\ countWords(java.lang.String,\ java.util.HashSet)
+comment7.params=encrypted\ dict
+comment7.target=java.lang.String\ breakForLanguage(java.lang.String,\ java.util.HashSet)
+comment7.text=public\ String\ breakForLanguage(String\ encrypted,\ HashSet<String>\ dictionary)\r\n\ \ \ \ {\r\n\ \ \ \ \ \ \ \ \r\n\ \ \ \ \ \ \ \ int\ max\ \=\ 0;\r\n\ \ \ \ \ \ \ \ int\ keyLength\ \=\ 0;\r\n\ \ \ \ \ \ \ \ for(int\ i\=0;\ i<100;\ i++)\r\n\ \ \ \ \ \ \ \ {\r\n\ \ \ \ \ \ \ \ \ \ \ \ int[]\ currKey\ \=\ tryKeyLength(encrypted,i,'e');\r\n\ \ \ \ \ \ \ \ \ \ \ \ VigenereCipher\ vc\ \=\ new\ VigenereCipher(currKey);\r\n\ \ \ \ \ \ \ \ \ \ \ \ String\ currDecrypted\ \=\ vc.decrypt(encrypted);\r\n\ \ \ \ \ \ \ \ \ \ \ \ int\ realWords\ \=\ countWords(currDecrypted,dictionary);\r\n\ \ \ \ \ \ \ \ \ \ \ \ if(realWords\ >\ max)\r\n\ \ \ \ \ \ \ \ \ \ \ \ {\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ max\=\ realWords;\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ keyLength\=i;\r\n\ \ \ \ \ \ \ \ \ \ \ \ }\r\n\ \ \ \ \ \ \ \ }\r\n\ \ \ \ \ \ \ \ int[]\ key\ \=\ tryKeyLength(encrypted,keyLength,'e');\r\n\ \ \ \ \ \ \ \ System.out.println(key.length);\r\n\ \ \ \ \ \ \ \ VigenereCipher\ vc1\ \=\ new\ VigenereCipher(key);\r\n\ \ \ \ \ \ \ \ String\ decrypted\ \=\ vc1.decrypt(encrypted);\ \r\n\ \ \ \ \ \ \ \ return\ decrypted;\r\n}
+numComments=8
