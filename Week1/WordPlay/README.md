@@ -15,6 +15,5 @@ the vowels (uppercase or lowercase) replaced by ​ch​. For example, the callr
 String that is the string phrase but withthe character ​ch​ (upper­ or lowercase) replaced by○‘*’​ if it is in an odd number
 location in the string (e.g. the first character has anodd number location but an even index, it is at index 0)○‘+’​ if it is in
 an even number location in the string (e.g. the second character hasan even number location but an odd index, it is at index 1)
-
 For example, the call ​emphasize(“dna ctgaaactga”, ‘a’)​ would return thestring ​“dn* ctg+*+ctg+”​, and the call ​emphasize(“Mary
 BellaAbracadabra”, ‘a’)​ would return the string ​“M+ry Bell+ +br*c*d*br+”​. Besure to test this method.
