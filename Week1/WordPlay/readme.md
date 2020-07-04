@@ -1,4 +1,4 @@
-                        #Assignment 1: Word Play
+#Assignment 1: Word Play
   You will write a program to transform words from a file into another form, such as replacingvowels with an asterix
   
   **Specifically, you should do the following**
